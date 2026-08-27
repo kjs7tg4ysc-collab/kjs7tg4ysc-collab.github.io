@@ -1,94 +1,1299 @@
-# FyzioClinic - Physiotherapy Website
+<!DOCTYPE html>
 
-A simple, professional web presentation for a physiotherapy clinic.
+<html lang="cs">
 
-## Features
+<head>
 
-- **Responsive Design**: Works seamlessly on desktop, tablet, and mobile devices
-- **Clean Layout**: Professional and easy to navigate
-- **Contact Information**: Email and mobile contact links
-- **Service Showcase**: Display of main physiotherapy services
-- **Modern Styling**: Gradient colors and smooth interactions
+  <meta charset="UTF-8">
 
-## Files
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-- `index.html` - Main HTML structure with all sections
-- `styles.css` - Complete styling and responsive design
 
-## Getting Started
+  <meta name="description" content="D.I.C. Fyzioterapie – fyzioterapeutická ambulance v Brně. Individuální fyzioterapeutická péče pro děti, dospělé, sportovce i pacienty po úrazech.">
 
-Simply open `index.html` in your web browser to view the website.
 
-## Customization
+  <title>D.I.C. Fyzioterapie | Brno</title>
 
-### Update Contact Information
 
-Edit the contact section in `index.html`:
-- Replace `d.i.c.fyzioterapie# FyzioClinic - Physiotherapy Website
+  <style>
 
-A simple, professional web presentation for a physiotherapy clinic.
+    :root {
 
-## Features
+      --dark: #294442;
 
-- **Responsive Design**: Works seamlessly on desktop, tablet, and mobile devices
-- **Clean Layout**: Professional and easy to navigate
-- **Contact Information**: Email and mobile contact links
-- **Service Showcase**: Display of main physiotherapy services
-- **Modern Styling**: Gradient colors and smooth interactions
+      --green: #648f89;
 
-## Files
+      --light: #edf4f2;
 
-- `index.html` - Main HTML structure with all sections
-- `styles.css` - Complete styling and responsive design
+      --cream: #faf9f5;
 
-## Getting Started
+      --white: #ffffff;
 
-Simply open `index.html` in your web browser to view the website.
+      --text: #354846;
 
-## Customization
+      --muted: #697977;
 
-### Update Contact Information
+      --border: #dbe7e4;
 
-Edit the contact section in `index.html`:
-- Replace `d.i.c.fyzioterapie@gmail.com` with your email
-- Replace `+420702130248` with your mobile number
+    }
 
-### Update Services
 
-Modify the services in the "Our Services" section to match your offerings.
+    * {
 
-### Update Business Name
+      box-sizing: border-box;
 
-Replace "FyzioClinic" with your actual clinic name throughout the files.
+    }
 
-## Deployment
 
-You can host this website on:
-- GitHub Pages (free)
-- Netlify
-- Vercel
-- Any web hosting service
+    html {
 
-## License
+      scroll-behavior: smooth;
 
-© 2024 FyzioClinic. All rights reserved.` with your email
-- Replace `+420123456789` with your mobile number
+    }
 
-### Update Services
 
-Modify the services in the "Our Services" section to match your offerings.
+    body {
 
-### Update Business Name
+      margin: 0;
 
-Replace "FyzioClinic" with your actual clinic name throughout the files.
+      font-family: Arial, Helvetica, sans-serif;
 
-## Deployment
+      color: var(--text);
 
-You can host this website on:
-- GitHub Pages (free)
-- Netlify
-- Vercel
-- Any web hosting service
+      background: var(--cream);
+
+      line-height: 1.6;
+
+    }
+
+
+    a {
+
+      color: inherit;
+
+    }
+
+
+    .container {
+
+      width: min(1100px, calc(100% - 36px));
+
+      margin: auto;
+
+    }
+
+
+    /* HEADER */
+
+
+    header {
+
+      background: rgba(250, 249, 245, 0.96);
+
+      border-bottom: 1px solid var(--border);
+
+      position: sticky;
+
+      top: 0;
+
+      z-index: 100;
+
+    }
+
+
+    .nav {
+
+      min-height: 72px;
+
+      display: flex;
+
+      justify-content: space-between;
+
+      align-items: center;
+
+      gap: 25px;
+
+    }
+
+
+    .logo {
+
+      text-decoration: none;
+
+      font-weight: bold;
+
+      letter-spacing: 2px;
+
+      color: var(--dark);
+
+    }
+
+
+    nav {
+
+      display: flex;
+
+      gap: 25px;
+
+    }
+
+
+    nav a {
+
+      text-decoration: none;
+
+      color: var(--muted);
+
+      font-size: 15px;
+
+    }
+
+
+    nav a:hover {
+
+      color: var(--green);
+
+    }
+
+
+    /* HERO */
+
+
+    .hero {
+
+      padding: 100px 0;
+
+      background: linear-gradient(135deg, var(--light), var(--cream));
+
+    }
+
+
+    .hero-grid {
+
+      display: grid;
+
+      grid-template-columns: 1.3fr 0.7fr;
+
+      gap: 70px;
+
+      align-items: center;
+
+    }
+
+
+    .eyebrow {
+
+      color: var(--green);
+
+      text-transform: uppercase;
+
+      letter-spacing: 3px;
+
+      font-size: 13px;
+
+      font-weight: bold;
+
+      margin-bottom: 15px;
+
+    }
+
+
+    h1 {
+
+      color: var(--dark);
+
+      font-size: clamp(42px, 7vw, 76px);
+
+      line-height: 1.05;
+
+      margin: 0 0 25px;
+
+      letter-spacing: -2px;
+
+    }
+
+
+    .lead {
+
+      color: var(--muted);
+
+      font-size: 19px;
+
+      max-width: 650px;
+
+    }
+
+
+    .buttons {
+
+      display: flex;
+
+      gap: 14px;
+
+      flex-wrap: wrap;
+
+      margin-top: 30px;
+
+    }
+
+
+    .button {
+
+      display: inline-block;
+
+      padding: 13px 22px;
+
+      border-radius: 30px;
+
+      text-decoration: none;
+
+      font-weight: bold;
+
+      border: 1px solid var(--green);
+
+    }
+
+
+    .primary {
+
+      background: var(--green);
+
+      color: white;
+
+    }
+
+
+    .secondary {
+
+      color: var(--green);
+
+      background: transparent;
+
+    }
+
+
+    .hero-card {
+
+      background: white;
+
+      border: 1px solid var(--border);
+
+      border-radius: 25px;
+
+      padding: 30px;
+
+      box-shadow: 0 15px 40px rgba(41, 68, 66, 0.08);
+
+    }
+
+
+    .hero-card h3 {
+
+      margin-top: 0;
+
+      color: var(--dark);
+
+      font-size: 22px;
+
+    }
+
+
+    /* SECTIONS */
+
+
+    section {
+
+      padding: 85px 0;
+
+    }
+
+
+    .light-section {
+
+      background: var(--light);
+
+    }
+
+
+    .section-heading {
+
+      max-width: 700px;
+
+      margin-bottom: 40px;
+
+    }
+
+
+    h2 {
+
+      color: var(--dark);
+
+      font-size: clamp(32px, 5vw, 48px);
+
+      line-height: 1.15;
+
+      margin: 0 0 15px;
+
+    }
+
+
+    .section-heading p {
+
+      color: var(--muted);
+
+    }
+
+
+    /* METHODS */
+
+
+    .methods {
+
+      display: grid;
+
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 18px;
+
+    }
+
+
+    .method {
+
+      background: white;
+
+      border: 1px solid var(--border);
+
+      border-radius: 18px;
+
+      padding: 25px;
+
+    }
+
+
+    .method h3 {
+
+      margin-top: 0;
+
+      color: var(--dark);
+
+    }
+
+
+    .method p {
+
+      color: var(--muted);
+
+      font-size: 15px;
+
+      margin-bottom: 0;
+
+    }
+
+
+    /* PROBLEMS */
+
+
+    .tags {
+
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 11px;
+
+    }
+
+
+    .tag {
+
+      background: white;
+
+      border: 1px solid var(--border);
+
+      border-radius: 30px;
+
+      padding: 9px 16px;
+
+    }
+
+
+    /* TEAM */
+
+
+    .two-columns {
+
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+
+      gap: 60px;
+
+      align-items: start;
+
+    }
+
+
+    .info-box {
+
+      background: white;
+
+      border: 1px solid var(--border);
+
+      border-radius: 22px;
+
+      padding: 30px;
+
+    }
+
+
+    .info-box h3 {
+
+      margin-top: 0;
+
+      color: var(--dark);
+
+    }
+
+
+    /* CONTACT */
+
+
+    .contact-grid {
+
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+
+      gap: 60px;
+
+    }
+
+
+    .contact-item {
+
+      padding: 20px 0;
+
+      border-bottom: 1px solid var(--border);
+
+    }
+
+
+    .contact-item:last-child {
+
+      border-bottom: none;
+
+    }
+
+
+    .contact-item strong {
+
+      display: block;
+
+      color: var(--green);
+
+      font-size: 13px;
+
+      text-transform: uppercase;
+
+      letter-spacing: 1px;
+
+      margin-bottom: 5px;
+
+    }
+
+
+    .contact-item a {
+
+      text-decoration: none;
+
+      font-size: 17px;
+
+    }
+
+
+    .hours {
+
+      display: grid;
+
+      grid-template-columns: 80px auto;
+
+      gap: 5px 15px;
+
+    }
+
+
+    /* FOOTER */
+
+
+    footer {
+
+      background: var(--dark);
+
+      color: white;
+
+      padding: 30px 0;
+
+      font-size: 14px;
+
+    }
+
+
+    /* MOBILE */
+
+
+    @media (max-width: 800px) {
+
+
+      .hero {
+
+        padding: 70px 0;
+
+      }
+
+
+      .hero-grid,
+
+      .two-columns,
+
+      .contact-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+
+      }
+
+
+      .methods {
+
+        grid-template-columns: 1fr 1fr;
+
+      }
+
+
+      .nav {
+
+        flex-direction: column;
+
+        padding: 18px 0;
+
+      }
+
+
+      nav {
+
+        gap: 15px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+      }
+
+    }
+
+
+    @media (max-width: 520px) {
+
+
+      .container {
+
+        width: min(100% - 28px, 1100px);
+
+      }
+
+
+      .methods {
+
+        grid-template-columns: 1fr;
+
+      }
+
+
+      h1 {
+
+        font-size: 45px;
+
+      }
+
+
+      section {
+
+        padding: 65px 0;
+
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <!-- HLAVIČKA -->
+
+
+  <header>
+
+    <div class="container nav">
+
+
+      <a href="#top" class="logo">
+
+        D.I.C. FYZIOTERAPIE
+
+      </a>
+
+
+      <nav>
+
+        <a href="#metody">Metody</a>
+
+        <a href="#obtize">Obtíže</a>
+
+        <a href="#tym">O nás</a>
+
+        <a href="#kontakt">Kontakt</a>
+
+      </nav>
+
+
+    </div>
+
+  </header>
+
+
+
+  <main id="top">
+
+
+    <!-- ÚVOD -->
+
+
+    <section class="hero">
+
+
+      <div class="container hero-grid">
+
+
+        <div>
+
+
+          <div class="eyebrow">
+
+            Fyzioterapeutická ambulance · Brno
+
+          </div>
+
+
+          <h1>
+
+            Pohyb bez zbytečných omezení.
+
+          </h1>
+
+
+          <p class="lead">
+
+            D.I.C. Fyzioterapie nabízí individuální fyzioterapeutickou péči
+
+            pro děti, dospělé, sportovce i pacienty po úrazech.
+
+            Zaměřujeme se na hledání příčiny obtíží a cílenou terapii.
+
+          </p>
+
+
+          <div class="buttons">
+
+
+            <a href="#kontakt" class="button primary">
+
+              Objednat se
+
+            </a>
+
+
+            <a href="#metody" class="button secondary">
+
+              Naše metody
+
+            </a>
+
+
+          </div>
+
+
+        </div>
+
+
+
+        <div class="hero-card">
+
+
+          <h3>
+
+            Individuální přístup
+
+          </h3>
+
+
+          <p>
+
+            Jsme tým tří fyzioterapeutek.
+
+            Při terapii kombinujeme různé fyzioterapeutické přístupy
+
+            podle konkrétních potřeb každého klienta.
+
+          </p>
+
+
+          <p>
+
+            <strong>Ordinační hodiny</strong><br>
+
+            Po–Čt: 07:00–21:00<br>
+
+            Pá: 07:00–17:00
+
+          </p>
+
+
+        </div>
+
+
+      </div>
+
+
+    </section>
+
+
+
+    <!-- METODY -->
+
+
+    <section id="metody">
+
+
+      <div class="container">
+
+
+        <div class="section-heading">
+
+
+          <div class="eyebrow">
+
+            Fyzioterapie
+
+          </div>
+
+
+          <h2>
+
+            Metody a přístupy
+
+          </h2>
+
+
+          <p>
+
+            V terapii využíváme řadu manuálních a pohybových technik.
+
+            Konkrétní postup volíme individuálně podle vyšetření
+
+            a cíle terapie.
+
+          </p>
+
+
+        </div>
+
+
+
+        <div class="methods">
+
+
+          <div class="method">
+
+            <h3>DNS</h3>
+
+            <p>
+
+              Dynamická neuromuskulární stabilizace a práce
+
+              s pohybovými stereotypy.
+
+            </p>
+
+          </div>
+
+
+          <div class="method">
+
+            <h3>ACT</h3>
+
+            <p>
+
+              Aktivní cílená terapie zaměřená na funkční pohyb
+
+              a stabilizaci.
+
+            </p>
+
+          </div>
+
+
+          <div class="method">
+
+            <h3>PNF</h3>
+
+            <p>
+
+              Proprioceptivní neuromuskulární facilitace
+
+              pro podporu koordinace a pohybu.
+
+            </p>
+
+          </div>
+
+
+          <div class="method">
+
+            <h3>Viscerální manipulace</h3>
+
+            <p>
+
+              Manuální práce zaměřená na funkční souvislosti
+
+              v oblasti vnitřních orgánů.
+
+            </p>
+
+          </div>
+
+
+          <div class="method">
+
+            <h3>Techniky měkkých tkání</h3>
+
+            <p>
+
+              Ošetření svalů, fascií a dalších měkkých tkání.
+
+            </p>
+
+          </div>
+
+
+          <div class="method">
+
+            <h3>Mobilizace</h3>
+
+            <p>
+
+              Manuální techniky podporující pohyblivost kloubů
+
+              a funkci pohybového aparátu.
+
+            </p>
+
+          </div>
+
+
+          <div class="method">
+
+            <h3>Ošetření jizev</h3>
+
+            <p>
+
+              Práce s jizvou a okolními tkáněmi s ohledem
+
+              na jejich funkci a pohyblivost.
+
+            </p>
+
+          </div>
+
+
+          <div class="method">
+
+            <h3>TMK terapie</h3>
+
+            <p>
+
+              Fyzioterapeutická péče o oblast temporomandibulárního
+
+              kloubu a související obtíže.
+
+            </p>
+
+          </div>
+
+
+          <div class="method">
+
+            <h3>Podologie</h3>
+
+            <p>
+
+              Vyšetření a terapie související s funkcí chodidla
+
+              a jeho vlivem na pohybový aparát.
+
+            </p>
+
+          </div>
+
+
+        </div>
+
+
+      </div>
+
+
+    </section>
+
+
+
+    <!-- OBTÍŽE -->
+
+
+    <section id="obtize" class="light-section">
+
+
+      <div class="container">
+
+
+        <div class="section-heading">
+
+
+          <div class="eyebrow">
+
+            S čím pomáháme
+
+          </div>
+
+
+          <h2>
+
+            Různé obtíže, individuální řešení
+
+          </h2>
+
+
+          <p>
+
+            Věnujeme se akutním i dlouhodobým potížím
+
+            pohybového aparátu.
+
+          </p>
+
+
+        </div>
+
+
+
+        <div class="tags">
+
+
+          <span class="tag">Po úrazech</span>
+
+          <span class="tag">Chronické obtíže</span>
+
+          <span class="tag">Vertebropatie</span>
+
+          <span class="tag">Sportovci</span>
+
+          <span class="tag">Migrény</span>
+
+          <span class="tag">Úponové bolesti</span>
+
+          <span class="tag">Fyzioterapie dětí</span>
+
+          <span class="tag">Obtíže pohybového aparátu</span>
+
+
+        </div>
+
+
+      </div>
+
+
+    </section>
+
+
+
+    <!-- O NÁS -->
+
+
+    <section id="tym">
+
+
+      <div class="container two-columns">
+
+
+        <div>
+
+
+          <div class="eyebrow">
+
+            O nás
+
+          </div>
+
+
+          <h2>
+
+            Tři fyzioterapeutky, jeden cíl.
+
+          </h2>
+
+
+          <p>
+
+            V D.I.C. Fyzioterapii se věnujeme individuální péči
+
+            o pohybový aparát.
+
+          </p>
+
+
+          <p>
+
+            Kombinujeme zkušenosti a různé terapeutické přístupy
+
+            tak, aby terapie odpovídala konkrétním potřebám klienta.
+
+          </p>
+
+
+        </div>
+
+
+
+        <div class="info-box">
+
+
+          <h3>
+
+            Co je pro nás důležité
+
+          </h3>
+
+
+          <p>
+
+            Důkladné vyšetření, srozumitelné vysvětlení obtíží,
+
+            aktivní spolupráce s klientem a postup,
+
+            který dává smysl v běžném životě.
+
+          </p>
+
+
+        </div>
+
+
+      </div>
+
+
+    </section>
+
+
+
+    <!-- KONTAKT -->
+
+
+    <section id="kontakt" class="light-section">
+
+
+      <div class="container contact-grid">
+
+
+        <div>
+
+
+          <div class="eyebrow">
+
+            Kontakt
+
+          </div>
+
+
+          <h2>
+
+            Objednejte se na fyzioterapii
+
+          </h2>
+
+
+          <p>
+
+            Pro objednání nás můžete kontaktovat telefonicky
+
+            nebo e-mailem.
+
+          </p>
+
+
+          <div class="buttons">
+
+
+            <a
+
+              href="tel:+420702130248"
+
+              class="button primary">
+
+              702 130 248
+
+            </a>
+
+
+            <a
+
+              href="mailto:d.i.c.fyzioterapie@gmail.com"
+
+              class="button secondary">
+
+              Napsat e-mail
+
+            </a>
+
+
+          </div>
+
+
+        </div>
+
+
+
+        <div>
+
+
+          <div class="contact-item">
+
+
+            <strong>Adresa</strong>
+
+
+            Metodějova 186/4<br>
+
+            Brno
+
+
+          </div>
+
+
+
+          <div class="contact-item">
+
+
+            <strong>Telefon</strong>
+
+
+            <a href="tel:+420702130248">
+
+              702 130 248
+
+            </a>
+
+
+            <br>
+
+
+            <a href="tel:+420541240755">
+
+              541 240 755
+
+            </a>
+
+
+          </div>
+
+
+
+          <div class="contact-item">
+
+
+            <strong>E-mail</strong>
+
+
+            <a href="mailto:d.i.c.fyzioterapie@gmail.com">
+
+              d.i.c.fyzioterapie@gmail.com
+
+            </a>
+
+
+          </div>
+
+
+
+          <div class="contact-item">
+
+
+            <strong>Ordinační hodiny</strong>
+
+
+            <div class="hours">
+
+
+              <span>Po–Čt</span>
+
+              <strong>07:00–21:00</strong>
+
+
+              <span>Pá</span>
+
+              <strong>07:00–17:00</strong>
+
+
+            </div>
+
+
+          </div>
+
+
+        </div>
+
+
+      </div>
+
+
+    </section>
+
+
+  </main>
+
+
+
+  <!-- PATIČKA -->
+
+
+  <footer>
+
+
+    <div class="container">
+
+
+      © D.I.C. Fyzioterapie · Metodějova 186/4, Brno
+
+
+    </div>
+
+
+  </footer>
+
+
 
 ## License
 
